@@ -1,0 +1,235 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>MTA</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h3>Search Student</h3>-->
+<!--    <br>-->
+
+<!--    <form action="result/", method="post">-->
+<!--        <table>-->
+<!--            <tr>-->
+<!--                <td><label>Name</label></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><input type="text" name="name"/><br></td>-->
+<!--                <td><input type="submit" value="Search"/></td>-->
+<!--            </tr>-->
+<!--        </table>-->
+<!--    </form>-->
+<!--    <br>-->
+<!--    <h3>One Potato = $500</h3>-->
+<!--    <br>-->
+<!--    <form action="register/", method="post">-->
+<!--        <table>-->
+<!--            <tr>-->
+<!--                <td><label>ID :</label></td>-->
+<!--                <td><input type="text" name="sid"/><br></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><label>Name</label></td>-->
+<!--                <td><input type="text" name="name"/><br></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><label>Phone Number</label></td>-->
+<!--                <td><input type="text" name="phone"/><br></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><label>Address</label></td>-->
+<!--                <td><input type="text" name="address"/><br></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><input type="submit" value="Register"/></td>-->
+<!--            </tr>-->
+<!--        </table>-->
+<!--    </form>-->
+
+<!--    <h3>Delete Student</h3>-->
+<!--    <br>-->
+
+<!--    <form action="delete/", method="post">-->
+<!--        <table>-->
+<!--            <tr>-->
+<!--                <td><label>SID</label></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><input type="text" name="sid"/><br></td>-->
+<!--                <td><input type="submit" value="Delete"/></td>-->
+<!--            </tr>-->
+<!--        </table>-->
+<!--    </form>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Portfolio</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <!-- BOX Icons -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav>
+    <a href="#" class="logo">Potato</a>
+    <div class="toggle" onclick="toggleMenu();"></div>
+
+    <!-- Menu -->
+    <ul class="menu">
+        <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu();">About</a></li>
+        <li><a href="#services" onclick="toggleMenu();">Services</a></li>
+        <li><a href="#work" onclick="toggleMenu();">Work</a></li>
+        <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+    </ul>
+</nav>
+<!-- Main Home Text And Image -->
+<section id="home">
+    <div class="home-text">
+        <h1>Hay, I'm <br>Potato <span>Nemo</span> <br>Web Developer</h1>
+        <!-- Button -->
+        <a href="#contact">Hire Me</a>
+    </div>
+    <!-- Home Image -->
+    <div class="home-img">
+        <img src="{{ url_for('static',filename='images/potato.jpg') }}" alt="">
+    </div>
+
+    <!-- Social -->
+    <div class="social">
+        <i class='bx bxl-facebook'  ></i>
+        <i class='bx bxl-twitter' ></i>
+        <i class='bx bxl-github' ></i>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about">
+    <div class="heading">
+        <h2>About</h2>
+        <p>My Introduction</p>
+    </div>
+    <div class="about-content">
+        <!-- About Image -->
+        <div class="about-img">
+            <img src="{{ url_for('static',filename='images/potato2.jpg') }}" alt="">
+        </div>
+        <!-- About Text -->
+        <div class="about-text">
+            <h1>I'm Potato</h1>
+            <p>Do You Wanna Eat The potatooooooo....</p>
+            <a href="https://mega.nz/file/x3pzhQ4J#1ljSG7irvsMFySjBX8UMYaLxGwlNXnjWIzXYdS-UPsA">Download Cv</a>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+    <div class="heading">
+        <h2>Services</h2>
+        <p>Services We Offer,</p>
+    </div>
+    <div class="services-content">
+        <!-- Boxes -->
+        <div class="box">
+            <img src="{{ url_for('static',filename='images/html.png') }}" alt="">
+            <h1>HTML Project</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ex perferendis iusto placeat fuga laborum.</p>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static',filename='images/css-3.png') }}" alt="">
+            <h1>CSS Project</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ex perferendis iusto placeat fuga laborum.</p>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static',filename='images/js.jpg') }}" alt="">
+            <h1>Javasript Project</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ex perferendis iusto placeat fuga laborum.</p>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static',filename='images/ux.png') }}" alt="">
+            <h1>UX/UI Design</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ex perferendis iusto placeat fuga laborum.</p>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static',filename='images/wordpress.png') }}" alt="">
+            <h1>Wordpress</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ex perferendis iusto placeat fuga laborum.</p>
+        </div>
+
+        <div class="box" onclick="location.href = 'https://github.com/SaiHtetMyatHtut/temp'">
+            <img src="{{ url_for('static',filename='images/prototype.png') }}" alt="">
+            <h1>Hobbyist Projects</h1>
+            <p>Click Here To View My Hobbyist Project.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Work -->
+<section id="work">
+    <div class="heading work-heading">
+        <h2>Work</h2>
+        <p>Work With Us</p>
+    </div>
+    <div class="work-content">
+        <div class="work-text">
+            <h1>We Belive To Deliver Best <br> Quality Work</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam sint, libero consequatur iusto nulla praesentium. Ab ipsum iusto molestias odio. Dolorem voluptatum praesentium repudiandae amet soluta doloremque, nam ipsa, commodi dicta ab, quisquam quos velit!</p>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="work-img">
+            <img src="{{ url_for('static',filename='images/work.jpg') }}" alt="">
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact -->
+<section id="contact">
+    <div class="heading color">
+        <h2>Contact</h2>
+        <p>Leave a message we will try to reply in 24 hours.</p>
+    </div>
+    <div class="contact-content">
+        <div class="app">
+            <h1>Connect With Us <br> By Our Apps </h1>
+            <a href="#"><i class='bx bxl-play-store' ></i></a>
+            <a href="#"><i class='bx bxl-apple' ></i></a>
+        </div>
+        <div class="contact-form">
+            <form action="/feedback" method="post">
+                <input type="text" placeholder="Name" name="name">
+                <input type="email" placeholder="Your E-mail" name="email">
+                <textarea id="" cols="30" rows="10" placeholder="Your Message Here..." name="feedback"></textarea>
+                <input type="submit" value="Send" class="contact-button">
+            </form>
+        </div>
+    </div>
+</section>
+
+<div class="copyright">
+    <p>&#169; 2021 Potato.inc All Right Reserves</p>
+</div>
+
+
+
+
+<!-- Scroll Animation -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<!-- Link To JS -->
+<script src="{{ url_for('static',filename='main.js') }}"></script>
+</body>
+</html>
